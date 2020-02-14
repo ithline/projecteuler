@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Reflection;
 
 namespace ProjectEuler
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             do
             {
@@ -22,7 +22,7 @@ namespace ProjectEuler
                     Console.WriteLine("Neplatny vstup.");
                 }
                 Console.WriteLine("Pokracovat? a/[n]");
-            } 
+            }
             while (Console.ReadKey().Key == ConsoleKey.A);
         }
 

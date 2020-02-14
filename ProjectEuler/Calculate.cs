@@ -55,5 +55,36 @@ namespace ProjectEuler
             }
             return result;
         }
+
+        public static int Factorial(int n)
+        {
+            if (n < 2) return 1;
+
+            var result = 1;
+            while (n > 1)
+            {
+                result *= n--;
+            }
+            return result;
+        }
+
+        public static long DivisorSum(long number)
+        {
+            var sum = 1L;
+            var max = (long)Math.Sqrt(number);
+            for (long d = 2; d <= max; d++)
+            {
+                if (number % d == 0)
+                {
+                    sum += d;
+                    sum += number / d;
+                }
+            }
+            if (max * max == number)
+            {
+                sum -= max;
+            }
+            return sum;
+        }
     }
 }

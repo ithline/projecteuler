@@ -7,10 +7,11 @@
 
   <ItemGroup>
     <None Remove="Resources\Problem18.txt" />
+    <None Remove="Resources\Problem22.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Problem18.txt" />
+    <EmbeddedResource Include="Resources\*.*" />
   </ItemGroup>
 
 </Project>

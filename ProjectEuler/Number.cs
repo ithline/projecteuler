@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace ProjectEuler
@@ -72,17 +72,6 @@ namespace ProjectEuler
                 return ToText(n) + " thousand";
             }
             throw new ArgumentOutOfRangeException();
-        }
-
-        public static IReadOnlyCollection<long> GetDigits(long number)
-        {
-            var result = new Stack<long>();
-            while (number != 0)
-            {
-                number = Math.DivRem(number, 10, out var rem);
-                result.Push(rem);
-            }
-            return result;
         }
     }
 }
